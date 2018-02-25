@@ -5,4 +5,14 @@ package nyc.c4q.pupapplication.model;
  */
 
 public class Dogs {
+    private String status;
+    private String message;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }

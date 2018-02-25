@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = login.edit();
-                String checkUser = "charlie";
+                String checkUser = "Charlie";
                 String checkPassword = "abc123";
 
                 if (save.isChecked()) {
