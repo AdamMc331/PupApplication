@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context="nyc.c4q.pupapplication.BreedsActivity">
 
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What kind if Dog would you like to see, ?  "
+        android:textSize="25sp"/>
+
 </android.support.constraint.ConstraintLayout>

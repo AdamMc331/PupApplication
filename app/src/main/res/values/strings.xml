@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PupApplication</string>
+    <string name="BreedText">What kind of Dog would you like to see,</string>
 </resources>
