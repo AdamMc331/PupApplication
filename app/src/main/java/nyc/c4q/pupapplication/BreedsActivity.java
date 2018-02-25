@@ -1,11 +1,13 @@
 package nyc.c4q.pupapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,11 +23,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-//import static nyc.c4q.pupapplication.Network.Service.getPuppy;
+
 
 public class BreedsActivity extends AppCompatActivity {
 
-
+    SharedPreferences login;
+    String USER_KEY;
     private static final String TAG = "JSON?";
     private ImageView imageView;
     private TextView newPup;
@@ -99,6 +102,15 @@ public class BreedsActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        SharedPreferences.Editor editor = login.edit();
+        editor.putString(USER_KEY, null);
+        Intent loginIntent = new Intent(BreedsActivity.this, LoginActivity.class);
+        startActivity(loginIntent);
         return true;
     }
 }
