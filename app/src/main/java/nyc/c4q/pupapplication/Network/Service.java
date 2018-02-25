@@ -9,7 +9,7 @@ import retrofit2.http.GET;
  */
 
 public interface Service {
-    @GET("api/breed/{breed-name}/image/random")
+    @GET("api/breed/terrier/image/random")
     Call<Dogs> getPuppy();
 
 }
